@@ -691,6 +691,13 @@ a-list
 
 some-x
 
+;; Lexical scoping doesn't prevent to use global vars if they're referenced
+;; with their namespace
+(let [some-x 3]
+  lt-cljs-tutorial/some-x)
+
+some-x
+
 ;; Closures
 ;; ----------------------------------------------------------------------------
 
